@@ -1,0 +1,12 @@
+{
+    "name": "@support-library/fonts",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+      "build": "tsc && node scripts/build-fonts.js"
+    },
+    "devDependencies": {
+      "typescript": "^4.5.2"
+    }
+  }
+  
