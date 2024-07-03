@@ -7,7 +7,7 @@ const outputDir = path.resolve(__dirname, '../dist');
 
 // Cria o diretório de saída, se não existir
 if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir);
+    fs.mkdirSync(outputDir);
 }
 
 // Função para gerar CSS
@@ -27,6 +27,7 @@ fs.readdir(fontsDir, (err, files) => {
     if (path.extname(file) === '.ttf') {
       const fontName = path.basename(file, '.ttf');
       const cssContent = generateCSS(fontName);
+      fs.copyFileSync(path.join(fontsDir, file), path.join(outputDir, file));
       fs.writeFileSync(path.join(outputDir, `${fontName}.css`), cssContent);
     }
   });
