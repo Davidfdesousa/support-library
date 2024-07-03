@@ -7,7 +7,7 @@ const outputDir = path.resolve(__dirname, '../dist');
 
 // Cria o diretório de saída, se não existir
 if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir);
+    fs.mkdirSync(outputDir, { recursive: true });
 }
 
 // Função para gerar CSS
