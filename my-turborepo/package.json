@@ -2,23 +2,20 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "clean": "turbo run clean",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
     "prettier": "^3.2.5",
     "turbo": "^2.0.6"
   },
-  "name": "design-system",
-  "packageManager": "yarn@4.3.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  },
+  "name": "kitchen-sink"
 }
