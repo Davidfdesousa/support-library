@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "CommonJS",
+      "lib": ["ESNext", "DOM"],
+      "allowJs": true,
+      "jsx": "react-jsx",
+      "strict": true,
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": ".",
+      "paths": {
+        "@package-one/*": ["packages/package-one/src/*"],
+        "@package-two/*": ["packages/package-two/src/*"]
+      }
+    },
+    "include": ["packages/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

@@ -13,6 +13,8 @@ const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    '../packages/package-one/**/*.stories.@(ts|tsx|mdx)',
+    '../packages/package-two/**/*.stories.@(ts|tsx|mdx)',
   ],
   addons: [
     getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
@@ -25,6 +27,6 @@ const config: StorybookConfig = {
   framework: {
     name: getAbsolutePath("@storybook/react-webpack5"),
     options: {},
-  },
+  }
 };
 export default config;
