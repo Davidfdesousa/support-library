@@ -43,7 +43,7 @@ jobs:
               --account-name cdnexamples \
               --destination storybook \
               --source storybook-static \
-              --pattern "*"
+              --pattern "*" \
               --overwrite true
         env:
           AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
@@ -57,7 +57,7 @@ jobs:
               --account-name cdnexamples \
               --destination cdn \
               --source dist \
-              --pattern "*"
+              --pattern "*" \
               --overwrite true
         env:
           AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
