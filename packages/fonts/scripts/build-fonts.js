@@ -1,34 +1,32 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-// Diretório das fontes TTF
-const fontsDir = path.resolve(__dirname, '../src/assets');
-const outputDir = path.resolve(__dirname, '../dist');
+const srcDir = path.resolve(__dirname, "../src");
+const distDir = path.resolve(__dirname, "../dist");
 
-// Cria o diretório de saída, se não existir
-if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+// Cria o diretório de destino, se não existir
+if (!fs.existsSync(distDir)) {
+  fs.mkdirSync(distDir, { recursive: true });
 }
 
-// Função para gerar CSS
-const generateCSS = (fontName) => `
-@font-face {
-  font-family: '${fontName}';
-  src: url('./${fontName}.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-`;
-
-// Ler diretório e gerar arquivos CSS
-fs.readdir(fontsDir, (err, files) => {
-  if (err) throw err;
-  files.forEach(file => {
-    if (path.extname(file) === '.ttf') {
-      const fontName = path.basename(file, '.ttf');
-      const cssContent = generateCSS(fontName);
-      fs.copyFileSync(path.join(fontsDir, file), path.join(outputDir, file));
-      fs.writeFileSync(path.join(outputDir, `${fontName}.css`), cssContent);
+const copyRecursiveSync = (src, dest) => {
+  const exists = fs.existsSync(src);
+  const stats = exists && fs.statSync(src);
+  const isDirectory = exists && stats.isDirectory();
+  if (isDirectory) {
+    // Cria o diretório de destino para este nível, se não existir
+    if (!fs.existsSync(dest)) {
+      fs.mkdirSync(dest, { recursive: true });
     }
-  });
-});
+    fs.readdirSync(src).forEach((childItemName) => {
+      copyRecursiveSync(
+        path.join(src, childItemName),
+        path.join(dest, childItemName)
+      );
+    });
+  } else {
+    fs.copyFileSync(src, dest);
+  }
+};
+
+copyRecursiveSync(srcDir, distDir);

@@ -1,2 +1,2 @@
 "use strict";
-console.log("Fonts package");
+console.log("Script carregado");
