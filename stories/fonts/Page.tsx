@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from '../Header';
+import { Header } from '../components/Header';
 import '../page.css';
 
 type User = {
@@ -68,6 +68,7 @@ export const Page: React.FC = () => {
           Viewports addon in the toolbar
         </div>
       </section>
+      
     </article>
   );
 };

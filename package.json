@@ -7,10 +7,9 @@
   "scripts": {
     "build": "turbo build",
     "dev_": "turbo dev",
-    "dev": "cd apps/ && cd web-nextjs && yarn dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "sb": "storybook dev -p 6006",
+    "dev": "storybook dev -p 6006",
     "build-sb": "storybook build",
     "clean": "rm -rf node_modules && yarn cache clean && yarn"
   },
