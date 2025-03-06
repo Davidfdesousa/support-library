@@ -1,9 +1,9 @@
-name: Deploy Storybook to Azure Storage
+name: Deploy to Azure Storage (Storybook e Projeto)
 
 on:
   push:
     branches:
-      - main  # Ou a branch que você quiser
+      - main
 
 jobs:
   deploy:
@@ -20,17 +20,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Gera os arquivos estáticos do Storybook (pasta storybook-static)
       - name: Build Storybook
-        run: npm run build-sb  # Gera a pasta storybook-static
+        run: npm run build-sb
 
-      # 1) Faz login no Azure usando o Service Principal
+      # Gera a build do projeto (pasta dist)
+      - name: Build Projeto
+        run: npm run build
+
+      # Faz login no Azure usando o Service Principal
       - name: Login Azure
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # 2) Faz o upload dos arquivos para o contêiner "storybook"
-      - name: Upload to Blob
+      # Upload dos arquivos do Storybook para o container "storybook"
+      - name: Upload Storybook to Blob
         uses: azure/cli@v1
         with:
           inlineScript: |
@@ -40,5 +45,17 @@ jobs:
               --source storybook-static \
               --pattern "*"
         env:
-          # Passa a Storage Key como variável de ambiente para o CLI
+          AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
+
+      # Upload dos arquivos do projeto para o container "cdn"
+      - name: Upload Project Dist to Blob (CDN)
+        uses: azure/cli@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch \
+              --account-name cdnexamples \
+              --destination cdn \
+              --source dist \
+              --pattern "*"
+        env:
           AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
