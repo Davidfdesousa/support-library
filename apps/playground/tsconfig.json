@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@support-library/ui": ["../../packages/ui/src"],
+      "@support-library/tokens": ["../../packages/tokens/src"],
+      "@support-library/icons": ["../../packages/icons/src"],
+      "@support-library/fonts": ["../../packages/fonts/src"]
+    }
+  }
+}

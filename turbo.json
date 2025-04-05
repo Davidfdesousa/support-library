@@ -2,9 +2,10 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["packages/*/dist/**"]
+      "outputs": ["dist/**"]
     },
     "dev": {
+      "cache": false,
       "dependsOn": ["^dev"],
       "outputs": []
     }
