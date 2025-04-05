@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
@@ -10,8 +10,9 @@
     "jsx": "react-jsx",
     "composite": true,
     "module": "ESNext",
-    "target": "ES2017",
+    "target": "ES2018",
     "moduleResolution": "Node"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["turbo", "**/*.test.ts", "**/*.spec.ts"]
 }
