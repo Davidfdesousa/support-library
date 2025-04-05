@@ -1,12 +1,11 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { join, dirname } from "path";
+import { createRequire } from "module";
 
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
+const myRequire = createRequire(import.meta.url);
+
 function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, "package.json")));
+  return dirname(myRequire.resolve(join(value, "package.json")));
 }
 
 const config: StorybookConfig = {
@@ -29,12 +28,11 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal: async (config) => {
-    // Loader para arquivos TypeScript
     config?.module?.rules?.push({
       test: /\.(ts|tsx)$/,
       use: [
         {
-          loader: 'ts-loader',
+          loader: "ts-loader",
           options: {
             transpileOnly: true,
           },
@@ -43,16 +41,14 @@ const config: StorybookConfig = {
       exclude: /node_modules/,
     });
 
-    // Extensões reconhecidas
-    config.resolve?.extensions?.push('.ts', '.tsx');
+    config.resolve?.extensions?.push(".ts", ".tsx");
 
-    // 🔧 Polyfills para módulos Node nativos
     config.resolve = {
       ...config.resolve,
       fallback: {
         ...(config.resolve?.fallback || {}),
-        os: require.resolve('os-browserify/browser'),
-        tty: require.resolve('tty-browserify'),
+        os: myRequire.resolve("os-browserify/browser"),
+        tty: myRequire.resolve("tty-browserify"),
       },
     };
 
