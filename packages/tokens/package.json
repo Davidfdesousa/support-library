@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build:tokens": "node build-tokens.cjs",
-    "build": "tsc -b && vite build",
+    "build": "yarn build:tokens && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

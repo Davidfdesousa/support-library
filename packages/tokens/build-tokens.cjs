@@ -1,4 +1,5 @@
 const StyleDictionary = require('style-dictionary');
+const fs = require('fs');
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -39,8 +40,10 @@ StyleDictionary.registerFormat({
       '\n}\n\nexport const tokens: Tokens = {\n' +
       dictionary.allProperties
         .map(token => {
-          const safeValue = token.value.replace(/'/g, "\\'");
-          return `  '${lowercaseFirst(token.name)}': '${safeValue}',`;
+          const value = typeof token.value === 'string'
+            ? `'${token.value.replace(/'/g, "\\'")}'`
+            : token.value;
+          return `  '${lowercaseFirst(token.name)}': ${value},`;
         })
         .join('\n') +
       '\n};'
@@ -49,6 +52,8 @@ StyleDictionary.registerFormat({
 });
 
 const themes = ['light', 'dark'];
+
+console.log('\nBuilding Design Tokens:\n');
 
 themes.forEach((theme) => {
   const SD = StyleDictionary.extend({
@@ -123,5 +128,28 @@ themes.forEach((theme) => {
   });
 
   SD.buildAllPlatforms();
+
+  console.log(`  Theme: ${capitalize(theme)}\n`);
+
+  const platforms = {
+    css: `dist/css/variables.${theme}.css`,
+    scss: `dist/scss/variables.${theme}.scss`,
+    js: `dist/js/tokens.${theme}.js`,
+    ts: `dist/ts/tokens.${theme}.ts`,
+    xml: `dist/xml/tokens.${theme}.xml`,
+    swift: `dist/swift/StyleDictionary+${theme}.swift`
+  };
+
+  Object.entries(platforms).forEach(([label, filePath]) => {
+    const status = fs.existsSync(filePath)
+      ? '✔︎ gerado com sucesso!'
+      : '✘ erro ao gerar';
+
+    console.log(`  output ${label} ${status}`);
+  });
+
+  console.log();
 });
+
+console.log('Tokens gerados com sucesso!\n');
 
