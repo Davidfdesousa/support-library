@@ -1,8 +1,26 @@
 {
-  "typography": {
-    "font": {
-      "highlight": { "value": "Inter, sans-serif" },
-      "base": { "value": "Fira Code, monospace" }
+  "font": {
+    "family": {
+      "highlight": { "value": "'Inter', sans-serif" },
+      "base": { "value": "'Fira Code', monospace" }
+    },
+    "size": {
+      "xs": { "value": "12px" },
+      "sm": { "value": "14px" },
+      "md": { "value": "16px" },
+      "lg": { "value": "18px" },
+      "xl": { "value": "24px" },
+      "2xl": { "value": "30px" }
+    },
+    "weight": {
+      "regular": { "value": "400" },
+      "medium": { "value": "500" },
+      "bold": { "value": "700" }
+    },
+    "lineHeight": {
+      "tight": { "value": "110%" },
+      "normal": { "value": "140%" },
+      "relaxed": { "value": "160%" }
     }
   }
 }
