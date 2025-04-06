@@ -7,8 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:tokens": "node build-tokens.cjs",
-    "build": "yarn build:tokens && tsc -b && vite build",
+    "build": "node build-tokens.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -11,7 +11,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "dev": "storybook dev -p 6006",
-    "build-sb": "storybook build",
+    "build-sb": "turbo run build --filter=@support-library/fonts --filter=@support-library/tokens && storybook build && node scripts/copy-cdn-to-storybook.js",
     "dev:playground": "turbo run dev --filter=@support-library/playground",
     "clean": "rm -rf node_modules && yarn cache clean && yarn"
   },
