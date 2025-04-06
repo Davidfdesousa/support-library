@@ -1,5 +1,10 @@
 const StyleDictionary = require('style-dictionary');
 
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Registrar formato custom para XML
 StyleDictionary.registerFormat({
   name: 'custom/xml',
   formatter: function ({ dictionary }) {
@@ -8,7 +13,8 @@ StyleDictionary.registerFormat({
       dictionary.allProperties
         .map(token => {
           const name = token.name.replace(/\./g, '_');
-          return `  <color name="${name}">${token.value}</color>`;
+          const hex = token.value.replace(/^#ff/i, '#');
+          return `  <color name="${name}">${hex}</color>`;
         })
         .join('\n') +
       '\n</resources>'
@@ -52,6 +58,18 @@ themes.forEach((theme) => {
           {
             destination: `tokens.${theme}.xml`,
             format: 'custom/xml'
+          }
+        ]
+      },
+      swift: {
+        transformGroup: 'ios-swift',
+        buildPath: 'dist/swift/',
+        files: [
+          {
+            destination: `StyleDictionary+${theme}.swift`,
+            format: 'ios-swift/class.swift',
+            className: `StyleDictionary${capitalize(theme)}Tokens`,
+            filter: token => token.attributes.category === 'color'
           }
         ]
       }
