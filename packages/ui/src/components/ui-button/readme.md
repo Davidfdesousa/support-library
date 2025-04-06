@@ -9,10 +9,10 @@
 
 | Property   | Attribute  | Description | Type                                    | Default     |
 | ---------- | ---------- | ----------- | --------------------------------------- | ----------- |
-| `disabled` | `disabled` |             | `boolean`                               | `undefined` |
-| `size`     | `size`     |             | `"lg" \| "md" \| "sm"`                  | `undefined` |
-| `type`     | `type`     |             | `"button" \| "reset" \| "submit"`       | `undefined` |
-| `variant`  | `variant`  |             | `"default" \| "primary" \| "secondary"` | `undefined` |
+| `disabled` | `disabled` |             | `boolean`                               | `false`     |
+| `size`     | `size`     |             | `"lg" \| "md" \| "sm"`                  | `'md'`      |
+| `type`     | `type`     |             | `"button" \| "reset" \| "submit"`       | `'button'`  |
+| `variant`  | `variant`  |             | `"default" \| "primary" \| "secondary"` | `'default'` |
 
 
 ----------------------------------------------

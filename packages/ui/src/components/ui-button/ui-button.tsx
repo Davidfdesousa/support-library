@@ -6,17 +6,10 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class UiButton {
-  @Prop() type: 'button' | 'submit' | 'reset';
-  @Prop() variant: 'default' | 'primary' | 'secondary';
-  @Prop() size: 'sm' | 'md' | 'lg';
-  @Prop() disabled: boolean;
-
-  constructor() {
-    this.type = 'button';
-    this.variant = 'default';
-    this.size = 'md';
-    this.disabled = false;
-  }
+  @Prop() type: 'button' | 'submit' | 'reset' = 'button';
+  @Prop() variant: 'default' | 'primary' | 'secondary' = 'default';
+  @Prop() size: 'sm' | 'md' | 'lg' = 'md';
+  @Prop() disabled: boolean = false;
 
   render() {
     return (

@@ -1,6 +1,11 @@
 {
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
+    "target": "es2017",
+    "module": "ESNext",
+    "lib": ["dom", "es2017"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "types": ["@stencil/core"],
     "jsx": "react",
     "jsxFactory": "h",
@@ -8,14 +13,13 @@
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
+    "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "composite": true,
-    "module": "ESNext",
-    "target": "ES2018",
-    "moduleResolution": "Node"
+    "moduleResolution": "node"
   },
   "include": ["src/components"],
-  "exclude": ["turbo", "**/*.test.ts", "**/*.spec.ts"]
+  "exclude": ["turbo", "**/*.test.ts", "**/*.spec.ts","node_modules", "dist"]
 }
