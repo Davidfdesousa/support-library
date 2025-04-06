@@ -13,7 +13,13 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./components/*": "./dist/components/*",
+    "./loader": {
+      "import": "./dist/loader/index.js",
+      "types": "./dist/loader/index.d.ts"
+    },
+    "./components": {
+      "types": "./dist/components.d.ts"
+    },
     "./react": {
       "import": "./src/react/components.ts"
     },
