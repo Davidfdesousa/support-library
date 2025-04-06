@@ -1,0 +1,8 @@
+{
+  "typography": {
+    "font": {
+      "highlight": { "value": "Inter, sans-serif" },
+      "base": { "value": "Fira Code, monospace" }
+    }
+  }
+}
