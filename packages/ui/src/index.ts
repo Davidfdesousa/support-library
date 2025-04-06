@@ -1,1 +1,3 @@
-export * from './button';
+import { defineCustomElements } from '../loader';
+
+defineCustomElements();

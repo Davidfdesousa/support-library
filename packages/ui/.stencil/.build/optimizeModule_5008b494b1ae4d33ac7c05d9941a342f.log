@@ -1,0 +1,1 @@
+import{p as t,b as r}from"./p-CW8e-4Zv.js";export{s as setNonce}from"./p-CW8e-4Zv.js";import{g as a}from"./p-DQuL1Twl.js";var e=()=>{const s=import.meta.url;const r={};if(s!==""){r.resourcesUrl=new URL(".",s).href}return t(r)};e().then((async t=>{await a();return r([["p-75d0b396",[[1,"ui-button",{type:[1],variant:[1],size:[1],disabled:[4]}]]]],t)}));

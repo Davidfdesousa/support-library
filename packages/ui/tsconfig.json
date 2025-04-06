@@ -1,18 +1,21 @@
 {
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
+    "types": ["@stencil/core"],
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "jsx": "react-jsx",
     "composite": true,
     "module": "ESNext",
     "target": "ES2018",
     "moduleResolution": "Node"
   },
-  "include": ["src"],
+  "include": ["src/components"],
   "exclude": ["turbo", "**/*.test.ts", "**/*.spec.ts"]
 }
