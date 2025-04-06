@@ -17,10 +17,10 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         {/* @ts-ignore */}
-        <ui-button variant="secondary" size="md">count is </ui-button>
+        <ui-button variant="secondary" size="md">Web Component</ui-button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      Edit <code>src/app/app.component.html</code> and save to test HMR
+    </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

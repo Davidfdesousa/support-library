@@ -1,5 +1,5 @@
 {
-  "name": "support-library",
+  "name": "@support-library/ui",
   "private": true,
   "workspaces": [
     "apps/*",
