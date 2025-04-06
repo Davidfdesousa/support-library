@@ -1,3 +1,3 @@
-import { defineCustomElements } from '../loader';
+import { defineCustomElements } from '../dist/loader';
 
 defineCustomElements();
