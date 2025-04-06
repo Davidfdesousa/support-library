@@ -4,7 +4,11 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Registrar formato custom para XML
+function lowercaseFirst(str) {
+  return str.charAt(0).toLowerCase() + str.slice(1);
+}
+
+// Custom XML (Android)
 StyleDictionary.registerFormat({
   name: 'custom/xml',
   formatter: function ({ dictionary }) {
@@ -18,6 +22,28 @@ StyleDictionary.registerFormat({
         })
         .join('\n') +
       '\n</resources>'
+    );
+  }
+});
+
+// Custom TS (.d.ts)
+StyleDictionary.registerFormat({
+  name: 'custom/dts',
+  formatter: function ({ dictionary }) {
+    return (
+      '// Auto-generated tokens\n' +
+      'export interface Tokens {\n' +
+      dictionary.allProperties
+        .map(token => `  '${lowercaseFirst(token.name)}': string;`)
+        .join('\n') +
+      '\n}\n\nexport const tokens: Tokens = {\n' +
+      dictionary.allProperties
+        .map(token => {
+          const safeValue = token.value.replace(/'/g, "\\'");
+          return `  '${lowercaseFirst(token.name)}': '${safeValue}',`;
+        })
+        .join('\n') +
+      '\n};'
     );
   }
 });
@@ -41,6 +67,16 @@ themes.forEach((theme) => {
           }
         ]
       },
+      scss: {
+        transformGroup: 'scss',
+        buildPath: 'dist/scss/',
+        files: [
+          {
+            destination: `variables.${theme}.scss`,
+            format: 'scss/variables'
+          }
+        ]
+      },
       js: {
         transformGroup: 'js',
         buildPath: 'dist/js/',
@@ -48,6 +84,16 @@ themes.forEach((theme) => {
           {
             destination: `tokens.${theme}.js`,
             format: 'javascript/es6'
+          }
+        ]
+      },
+      ts: {
+        transformGroup: 'js',
+        buildPath: 'dist/ts/',
+        files: [
+          {
+            destination: `tokens.${theme}.ts`,
+            format: 'custom/dts'
           }
         ]
       },
@@ -78,3 +124,4 @@ themes.forEach((theme) => {
 
   SD.buildAllPlatforms();
 });
+
