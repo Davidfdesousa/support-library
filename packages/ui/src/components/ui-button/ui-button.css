@@ -1,12 +1,20 @@
+@import "../../../../tokens/dist/css/variables.light.css";
+
 :host {
   display: inline-block;
+  --button-bg: var(--color-bg-primary);
+  --button-fg: var(--color-content-on-primary);
 }
 
 button {
+  background: var(--button-bg);
+  color: var(--button-fg);
+  padding: var(--space-inset-md);
+  border-radius: var(--radii-md);
+
   all: unset;
   cursor: pointer;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
+
   font-weight: 600;
   font-family: inherit;
   transition: background 0.2s ease;

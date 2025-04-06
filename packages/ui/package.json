@@ -21,6 +21,8 @@
     "@stencil/angular-output-target": "^0.10.2",
     "@stencil/core": "^4.29.1",
     "@stencil/react-output-target": "0.6.0",
+    "@stencil/sass": "^3.2.1",
+    "@support-library/tokens": "*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",

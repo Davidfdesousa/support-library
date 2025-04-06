@@ -2,9 +2,14 @@
   "name": "@support-library/tokens",
   "version": "1.0.0",
   "main": "dist/index.cjs.js",
+  "private": false,
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [ "dist"],
+  "exports": {
+    "./dist/css/variables.light.css": "./dist/css/variables.light.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "node build-tokens.cjs",
