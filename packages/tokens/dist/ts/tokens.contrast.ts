@@ -206,7 +206,7 @@ export const tokens: Tokens = {
   'colorInfo800': '#1e40af',
   'colorInfo900': '#1e3a8a',
   'colorBg': '#000000',
-  'colorContent': '#ffffff',
+  'colorContent': '#000000',
   'colorDangerDefault': '#fff333',
   'radiusNone': '0px',
   'radiusSm': '4px',

@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Mon, 07 Apr 2025 14:37:05 GMT
+// Generated on Mon, 07 Apr 2025 14:46:29 GMT
 
 
 import UIKit
@@ -12,7 +12,7 @@ import UIKit
 public class StyleDictionaryContrastTokens {
     public static let colorBg = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1)
     public static let colorBlack = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1)
-    public static let colorContent = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1)
+    public static let colorContent = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1)
     public static let colorDangerDefault = UIColor(red: 1.000, green: 0.953, blue: 0.200, alpha: 1)
     public static let colorError100 = UIColor(red: 0.996, green: 0.886, blue: 0.886, alpha: 1)
     public static let colorError200 = UIColor(red: 0.996, green: 0.792, blue: 0.792, alpha: 1)

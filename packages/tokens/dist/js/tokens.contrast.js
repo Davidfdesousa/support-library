@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Apr 2025 14:37:05 GMT
+ * Generated on Mon, 07 Apr 2025 14:46:29 GMT
  */
 
 export const ColorWhite = "#ffffff";
@@ -83,7 +83,7 @@ export const ColorInfo700 = "#1d4ed8";
 export const ColorInfo800 = "#1e40af";
 export const ColorInfo900 = "#1e3a8a";
 export const ColorBg = "#000000";
-export const ColorContent = "#ffffff";
+export const ColorContent = "#000000";
 export const ColorDangerDefault = "#fff333";
 export const RadiusNone = "0px";
 export const RadiusSm = "4px";
