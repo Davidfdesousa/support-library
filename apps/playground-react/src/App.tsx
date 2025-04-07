@@ -10,12 +10,11 @@ function App() {
   useEffect(() => {
     document.documentElement.classList.remove('light', 'dark')
     document.documentElement.classList.add(theme)
-
-    applyTheme(theme) // aqui a mágica acontece
+    applyTheme(theme)
   }, [theme])
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
+  const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTheme(e.target.value as 'light' | 'dark')
   }
 
   return (
@@ -28,19 +27,42 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
       <h1>Vite + React</h1>
+
       <div className="card">
         {/* @ts-ignore */}
         <ui-button variant="primary" size="md">Web Component</ui-button>
 
-        <button onClick={toggleTheme} style={{ marginTop: '1rem' }}>
-          Toggle Theme (Current: {theme})
-        </button>
+        <fieldset className="theme-toggle">
+          <legend>Escolha o tema:</legend>
+          <label>
+            <input
+              type="radio"
+              name="theme"
+              value="light"
+              checked={theme === 'light'}
+              onChange={handleThemeChange}
+            />
+            Tema Light
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="theme"
+              value="dark"
+              checked={theme === 'dark'}
+              onChange={handleThemeChange}
+            />
+            Tema Dark
+          </label>
+        </fieldset>
 
         <p>
           Edit <code>src/app/app.component.html</code> and save to test HMR
         </p>
       </div>
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

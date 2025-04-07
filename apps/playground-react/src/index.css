@@ -28,3 +28,26 @@ body {
 button {
   font-family: inherit;
 }
+
+.theme-toggle {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--family-size-md);
+}
+
+.theme-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.theme-toggle input[type="radio"] {
+  accent-color: var(--color-primary-default);
+  width: 16px;
+  height: 16px;
+}
