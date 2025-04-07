@@ -18,7 +18,7 @@
   <color name="color_primary_100">#dbeafe</color>
   <color name="color_primary_200">#bfdbfe</color>
   <color name="color_primary_300">#93c5fd</color>
-  <color name="color_primary_400">#60a5fa</color>
+  <color name="color_primary_400">#059669</color>
   <color name="color_primary_500">#3b82f6</color>
   <color name="color_primary_600">#2563eb</color>
   <color name="color_primary_700">#1d4ed8</color>
@@ -26,7 +26,7 @@
   <color name="color_primary_900">#1e3a8a</color>
   <color name="color_primary_subtle">#1e3a8a</color>
   <color name="color_primary_muted">#1d4ed8</color>
-  <color name="color_primary_default">#60a5fa</color>
+  <color name="color_primary_default">#059669</color>
   <color name="color_primary_strong">#93c5fd</color>
   <color name="color_primary_intense">#bfdbfe</color>
   <color name="color_primary_hover">#3b82f6</color>

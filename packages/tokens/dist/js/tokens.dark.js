@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Apr 2025 11:59:53 GMT
+ * Generated on Mon, 07 Apr 2025 12:38:10 GMT
  */
 
 export const ColorWhite = "#ffffff";
@@ -21,7 +21,7 @@ export const ColorPrimary50 = "#eff6ff";
 export const ColorPrimary100 = "#dbeafe";
 export const ColorPrimary200 = "#bfdbfe";
 export const ColorPrimary300 = "#93c5fd";
-export const ColorPrimary400 = "#60a5fa";
+export const ColorPrimary400 = "#059669";
 export const ColorPrimary500 = "#3b82f6";
 export const ColorPrimary600 = "#2563eb";
 export const ColorPrimary700 = "#1d4ed8";
@@ -29,7 +29,7 @@ export const ColorPrimary800 = "#1e40af";
 export const ColorPrimary900 = "#1e3a8a";
 export const ColorPrimarySubtle = "#1e3a8a";
 export const ColorPrimaryMuted = "#1d4ed8";
-export const ColorPrimaryDefault = "#60a5fa";
+export const ColorPrimaryDefault = "#059669";
 export const ColorPrimaryStrong = "#93c5fd";
 export const ColorPrimaryIntense = "#bfdbfe";
 export const ColorPrimaryHover = "#3b82f6";
