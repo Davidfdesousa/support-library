@@ -1,85 +1,116 @@
-# Turborepo starter
+# 🧱 Support Library Monorepo
 
-This is an official starter Turborepo.
+Este é o monorepo do **Support Library**, um conjunto de bibliotecas pensadas para design systems modernos, com foco em acessibilidade, múltiplos temas, compatibilidade multiplataforma (React, Angular e Web Components), e integração via CDN.
 
-## Using this example
+---
 
-Run the following command:
+## 📦 Estrutura
+
+Gerenciado com [Turborepo](https://turbo.build/repo), o monorepo está organizado da seguinte forma:
+
+### Aplicações
+
+- `apps/playground-react`: playground em React para testes dos componentes.
+- `apps/playground-angular`: playground em Angular.
+- `apps/docs`: documentação em Next.js com Storybook integrado.
+
+### Pacotes
+
+- `packages/ui`: biblioteca de Web Components com suporte a React e Angular.
+- `packages/tokens`: tokens de design organizados por categorias (`spacing`, `color`, `typography`, etc.).
+- `packages/fonts`: gerenciamento e exposição de fontes via CDN.
+- `packages/icons`: biblioteca de ícones otimizados para UI.
+- `packages/eslint-config`: configurações compartilhadas de ESLint.
+- `packages/typescript-config`: `tsconfig` compartilhado entre os pacotes.
+
+---
+
+## 🎨 Temas
+
+Suporte nativo a temas:
+
+- `light`
+- `dark`
+- `contrast` (alto contraste: #000, #fff, #fff333)
+
+Troca de temas via classe na tag `html`, ex: `html.light`, `html.dark`.
+
+---
+
+## 🌐 CDN & Storybook
+
+Tokens e fontes disponíveis via CDN para fácil integração em qualquer aplicação.
+
+- 🔗 **Storybook Online**: [Acesse aqui](https://cdnexamples.blob.core.windows.net/storybook/index.html)
+- 📁 Tokens e fontes exportados para: `/storybook-static/cdn`
+
+---
+
+## 🛠️ Tecnologias
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Stencil](https://stenciljs.com/) para Web Components
+- [React](https://reactjs.org/) + [Angular](https://angular.io/)
+- [Storybook](https://storybook.js.org/)
+- [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
+- [Turborepo](https://turbo.build/)
+- [Azure Blob Storage](https://azure.microsoft.com/) para hospedagem de CDN
+
+---
+
+## 🧪 Testes
+
+A biblioteca de componentes tem suporte a testes unitários e segue as recomendações de acessibilidade (WCAG).
+
+---
+
+## 🚀 Comandos
+
+### Instalar dependências
 
 ```sh
-npx create-turbo@latest
+yarn install
 ```
-
-## What's inside? 
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
 
 ### Build
 
-To build all apps and packages, run the following command:
-
-```
-cd support-library
-pnpm build
+```sh
+yarn build
 ```
 
-### Develop
+### Dev (para desenvolvimento local)
 
-To develop all apps and packages, run the following command:
-
-```
-cd support-library
-pnpm dev
+```sh
+yarn dev
 ```
 
-### Remote Caching
+### Gerar tokens
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
+```sh
+yarn build:tokens
 ```
-cd support-library
+
+---
+
+## ☁️ Remote Caching (opcional)
+
+Caso queira habilitar cache remoto com a Vercel:
+
+```sh
 npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
 npx turbo link
 ```
 
-## Useful Links
+---
 
-Learn more about the power of Turborepo:
+## 📚 Links úteis
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Guia oficial Turborepo](https://turbo.build/repo/docs)
+- [Guia oficial Stencil](https://stenciljs.com/docs/introduction)
+- [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
 
+---
 
+## 📬 Contato
 
-link da url publica do storybook: https://cdnexamples.blob.core.windows.net/storybook/index.html
+Projeto mantido por [David](https://github.com/seu-usuario-aqui) — ideias, sugestões ou melhorias são bem-vindas!
