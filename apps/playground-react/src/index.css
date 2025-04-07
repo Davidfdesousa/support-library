@@ -1,6 +1,7 @@
 /* Importa os tokens globais de cada tema via CDN */
 @import url('https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.light.css');
 @import url('https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.dark.css');
+@import url('https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.contrast.css');
 
 /* Escopamos os tokens para aplicar por tema */
 .light :root {

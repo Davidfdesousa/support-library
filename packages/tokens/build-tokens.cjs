@@ -51,7 +51,7 @@ StyleDictionary.registerFormat({
   }
 });
 
-const themes = ['light', 'dark'];
+const themes = ['light', 'dark', 'contrast'];
 
 console.log('\nBuilding Design Tokens:\n');
 
