@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 06 Apr 2025 23:40:21 GMT
+ * Generated on Mon, 07 Apr 2025 11:59:53 GMT
  */
 
 export const ColorWhite = "#ffffff";
@@ -136,17 +136,17 @@ export const SpacingSquishLg = "16px 24px";
 export const SpacingStretchSm = "12px 8px";
 export const SpacingStretchMd = "16px 12px";
 export const SpacingStretchLg = "24px 16px";
-export const FontFamilyHighlight = "'Inter', sans-serif";
-export const FontFamilyBase = "'Fira Code', monospace";
-export const FontSizeXs = "12px";
-export const FontSizeSm = "14px";
-export const FontSizeMd = "16px";
-export const FontSizeLg = "18px";
-export const FontSizeXl = "24px";
-export const FontSize2xl = "30px";
-export const FontWeightRegular = "400";
-export const FontWeightMedium = "500";
-export const FontWeightBold = "700";
-export const FontLineHeightTight = "110%";
-export const FontLineHeightNormal = "140%";
-export const FontLineHeightRelaxed = "160%";
+export const FamilyHighlight = "'Roboto', sans-serif";
+export const FamilyBase = "'Roboto', sans-serif";
+export const FamilySizeXs = "12px";
+export const FamilySizeSm = "14px";
+export const FamilySizeMd = "16px";
+export const FamilySizeLg = "18px";
+export const FamilySizeXl = "24px";
+export const FamilySize2xl = "30px";
+export const FamilyWeightRegular = "400";
+export const FamilyWeightMedium = "500";
+export const FamilyWeightBold = "700";
+export const FamilyLineHeightTight = "110%";
+export const FamilyLineHeightNormal = "140%";
+export const FamilyLineHeightRelaxed = "160%";

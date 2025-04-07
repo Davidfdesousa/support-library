@@ -1,12 +1,12 @@
 {
   "name": "@support-library/tokens",
   "version": "1.0.0",
-  "main": "dist/index.cjs.js",
+  "main": "dist/css/variables.light.css",
   "private": false,
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "files": [ "dist"],
+  "files": ["dist/css"],
   "exports": {
     "./dist/css/variables.light.css": "./dist/css/variables.light.css"
   },

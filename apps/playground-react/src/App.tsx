@@ -17,7 +17,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         {/* @ts-ignore */}
-        <ui-button variant="secondary" size="md">Web Component</ui-button>
+        <ui-button variant="primary" size="md">Web Component</ui-button>
         <p>
       Edit <code>src/app/app.component.html</code> and save to test HMR
     </p>

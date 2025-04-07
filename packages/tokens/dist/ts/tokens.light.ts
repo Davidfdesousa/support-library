@@ -133,20 +133,20 @@ export interface Tokens {
   'spacingStretchSm': string;
   'spacingStretchMd': string;
   'spacingStretchLg': string;
-  'fontFamilyHighlight': string;
-  'fontFamilyBase': string;
-  'fontSizeXs': string;
-  'fontSizeSm': string;
-  'fontSizeMd': string;
-  'fontSizeLg': string;
-  'fontSizeXl': string;
-  'fontSize2xl': string;
-  'fontWeightRegular': string;
-  'fontWeightMedium': string;
-  'fontWeightBold': string;
-  'fontLineHeightTight': string;
-  'fontLineHeightNormal': string;
-  'fontLineHeightRelaxed': string;
+  'familyHighlight': string;
+  'familyBase': string;
+  'familySizeXs': string;
+  'familySizeSm': string;
+  'familySizeMd': string;
+  'familySizeLg': string;
+  'familySizeXl': string;
+  'familySize2xl': string;
+  'familyWeightRegular': string;
+  'familyWeightMedium': string;
+  'familyWeightBold': string;
+  'familyLineHeightTight': string;
+  'familyLineHeightNormal': string;
+  'familyLineHeightRelaxed': string;
 }
 
 export const tokens: Tokens = {
@@ -283,18 +283,18 @@ export const tokens: Tokens = {
   'spacingStretchSm': '12px 8px',
   'spacingStretchMd': '16px 12px',
   'spacingStretchLg': '24px 16px',
-  'fontFamilyHighlight': '\'Inter\', sans-serif',
-  'fontFamilyBase': '\'Fira Code\', monospace',
-  'fontSizeXs': '12px',
-  'fontSizeSm': '14px',
-  'fontSizeMd': '16px',
-  'fontSizeLg': '18px',
-  'fontSizeXl': '24px',
-  'fontSize2xl': '30px',
-  'fontWeightRegular': '400',
-  'fontWeightMedium': '500',
-  'fontWeightBold': '700',
-  'fontLineHeightTight': '110%',
-  'fontLineHeightNormal': '140%',
-  'fontLineHeightRelaxed': '160%',
+  'familyHighlight': '\'Roboto\', sans-serif',
+  'familyBase': '\'Roboto\', sans-serif',
+  'familySizeXs': '12px',
+  'familySizeSm': '14px',
+  'familySizeMd': '16px',
+  'familySizeLg': '18px',
+  'familySizeXl': '24px',
+  'familySize2xl': '30px',
+  'familyWeightRegular': '400',
+  'familyWeightMedium': '500',
+  'familyWeightBold': '700',
+  'familyLineHeightTight': '110%',
+  'familyLineHeightNormal': '140%',
+  'familyLineHeightRelaxed': '160%',
 };
