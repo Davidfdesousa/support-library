@@ -6,7 +6,7 @@
     "lib": ["dom", "es2017"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["@stencil/core"],
+    "types": ["@stencil/core", "jest"],
     "jsx": "react",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
