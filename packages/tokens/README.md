@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# ✨ Design Tokens – Guia Visual (Estilo Primer + Support Library)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este guia segue o padrão semântico inspirado no Primer do GitHub, adaptado para o design system da **Support Library**. A estrutura utiliza tokens nomeados por contexto e intenção de uso, com variações de tom bem definidas para facilitar a aplicação em temas claros e escuros.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📚 Convenção de nomes
 
-## Expanding the ESLint configuration
+Usamos nomes de **intenção semântica** combinados com **variações de tom**. Os principais grupos são:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧱 Estrutura semântica:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- `bg`: fundo principal da interface (ex: `body`, `card`, `container`)
+- `content`: cor de conteúdo visível sobre `bg` (ex: texto, ícones)
+- `border`: cor de linhas e contornos
+- `primary`, `secondary`, `success`, `warning`, `danger`: cores contextuais principais
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🌈 Variações de tom:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `subtle`: mais suave, geralmente para fundo
+- `muted`: tom reduzido, para hover ou elementos secundários
+- `default`: tom base da identidade visual
+- `strong`: maior presença, contraste médio
+- `intense`: o tom mais intenso/escuro
+- `hover`: estado de foco visual
+- `pressed`: estado pressionado
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Essas combinações geram tokens como:
+
+- `color.primary.default`
+- `color.secondary.subtle`
+- `color.content`
+- `color.bg`
+
+---
+
+## 🌗 Base Theme Tokens
+
+| Token           | Descrição                                 |
+|----------------|---------------------------------------------|
+| `color.bg`     | Fundo da interface                         |
+| `color.content`| Cor de conteúdo sobre `bg`                |
+| `color.border` | Cor de divisões e contornos               |
+
+---
+
+## 🔹 Cores Contextuais
+
+Tokens que definem os estilos principais da interface:
+
+### `primary`, `secondary`, `success`, `warning`, `danger`
+
+Cada um desses tokens possui as seguintes variações:
+
+- `.subtle`
+- `.muted`
+- `.default`
+- `.strong`
+- `.intense`
+- `.hover`
+- `.pressed`
+
+---
+
+## 🧰 Tokens de Componente
+
+Tokens derivados usados em componentes, como botões:
+
+| Token                        | Base usada                        |
+|-----------------------------|-----------------------------------|
+| `button.primary.bg`         | `color.primary.default`          |
+| `button.primary.content`    | `color.content`                  |
+| `button.primary.hover-bg`   | `color.primary.hover`            |
+| `button.secondary.bg`       | `color.secondary.default`        |
+| `button.secondary.content`  | `color.content`                  |
+
+---
+
+## 📘 Recomendações
+
+- Prefira tokens semânticos ao invés de nomes brutos (ex: `primary.500` ❌)
+- Use `bg` e `content` como base para estrutura e contraste
+- Utilize `subtle` para fundos, `muted` para hover e `strong/intense` para destaque
+- A consistência nos nomes facilita o theming e a manutenção
+
+---
+
+> 💡 **Dica**: esse padrão permite construir temas completos alterando apenas os arquivos `light.json`, `dark.json` e `contrast.json`, mantendo todos os componentes funcionando com os mesmos tokens.

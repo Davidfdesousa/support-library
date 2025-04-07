@@ -113,4 +113,4 @@ npx turbo link
 
 ## 📬 Contato
 
-Projeto mantido por [David](https://github.com/seu-usuario-aqui) — ideias, sugestões ou melhorias são bem-vindas!
+Projeto mantido por [David](https://www.linkedin.com/in/davidfdesousa/) — ideias, sugestões ou melhorias são bem-vindas!
