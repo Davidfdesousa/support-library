@@ -10,7 +10,12 @@ export namespace Components {
         "disabled": boolean;
         "size": 'sm' | 'md' | 'lg';
         "type": 'button' | 'submit' | 'reset';
-        "variant": 'default' | 'primary' | 'secondary';
+        "variant": | 'default'
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'danger';
     }
 }
 declare global {
@@ -29,7 +34,12 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "size"?: 'sm' | 'md' | 'lg';
         "type"?: 'button' | 'submit' | 'reset';
-        "variant"?: 'default' | 'primary' | 'secondary';
+        "variant"?: | 'default'
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'danger';
     }
     interface IntrinsicElements {
         "ui-button": UiButton;

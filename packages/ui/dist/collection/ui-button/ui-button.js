@@ -7,7 +7,8 @@ export class UiButton {
         this.disabled = false;
     }
     render() {
-        return (h("button", { key: 'fac8d9c354621983b6b1418eef4389e6e7f1e43f', type: this.type, class: `btn ${this.variant} ${this.size}`, disabled: this.disabled }, h("slot", { key: '45bc89b27c994ca0473082ae00355afda03170ba' })));
+        const classes = `${this.variant} ${this.size}`;
+        return (h("button", { key: 'd191940aa961a911a3e5a20357d10c936e1660a0', type: this.type, class: classes, disabled: this.disabled, "aria-disabled": this.disabled ? 'true' : null }, h("slot", { key: '37df10059c9c4a11ba4caf2aa93d112303a00028' })));
     }
     static get is() { return "ui-button"; }
     static get encapsulation() { return "shadow"; }
@@ -48,8 +49,8 @@ export class UiButton {
                 "attribute": "variant",
                 "mutable": false,
                 "complexType": {
-                    "original": "'default' | 'primary' | 'secondary'",
-                    "resolved": "\"default\" | \"primary\" | \"secondary\"",
+                    "original": "| 'default'\n    | 'primary'\n    | 'secondary'\n    | 'success'\n    | 'warning'\n    | 'danger'",
+                    "resolved": "\"danger\" | \"default\" | \"primary\" | \"secondary\" | \"success\" | \"warning\"",
                     "references": {}
                 },
                 "required": false,
