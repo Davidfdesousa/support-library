@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { applyTheme } from './theme-loader'
 
 function App() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+  useEffect(() => {
+    document.documentElement.classList.remove('light', 'dark')
+    document.documentElement.classList.add(theme)
+
+    applyTheme(theme) // aqui a mágica acontece
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
+  }
 
   return (
     <>
@@ -18,9 +32,14 @@ function App() {
       <div className="card">
         {/* @ts-ignore */}
         <ui-button variant="primary" size="md">Web Component</ui-button>
+
+        <button onClick={toggleTheme} style={{ marginTop: '1rem' }}>
+          Toggle Theme (Current: {theme})
+        </button>
+
         <p>
-      Edit <code>src/app/app.component.html</code> and save to test HMR
-    </p>
+          Edit <code>src/app/app.component.html</code> and save to test HMR
+        </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

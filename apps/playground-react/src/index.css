@@ -1,46 +1,30 @@
-@import url('https://cdnexamples.blob.core.windows.net/storybook/cdn/fonts/stylesheet.css');
+/* Importa os tokens globais de cada tema via CDN */
 @import url('https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.light.css');
 @import url('https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.dark.css');
 
-:root {
-  font-family: var(--family-highlight);
-  line-height: 1.5;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Escopamos os tokens para aplicar por tema */
+.light :root {
+  /* Os tokens de light já estão carregados globalmente via CDN,
+     então aqui apenas indicamos que o tema é light. */
 }
 
+.dark :root {
+  /* O mesmo para dark. O que importa é a classe no <html> */
+}
+
+/* Base */
+:root {
+  font-family: var(--family-base);
+}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-content);
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: var(--family-size-md);
+  padding: 2rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button {
+  font-family: inherit;
 }
