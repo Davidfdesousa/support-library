@@ -1,10 +1,10 @@
 {
 "family": {
   "highlight": {
-    "value": "Roboto, sans-serif"
+    "value": "'Roboto', sans-serif"
   },
   "base": {
-    "value": "Roboto, sans-serif"
+    "value": "'Roboto', sans-serif"
   },
   "size": {
     "xs": { "value": "12px" },
