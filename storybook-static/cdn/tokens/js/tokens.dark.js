@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Apr 2025 13:19:28 GMT
+ * Generated on Mon, 07 Apr 2025 13:46:56 GMT
  */
 
 export const ColorWhite = "#ffffff";
@@ -136,8 +136,8 @@ export const SpacingSquishLg = "16px 24px";
 export const SpacingStretchSm = "12px 8px";
 export const SpacingStretchMd = "16px 12px";
 export const SpacingStretchLg = "24px 16px";
-export const FamilyHighlight = "Roboto, sans-serif";
-export const FamilyBase = "Roboto, sans-serif";
+export const FamilyHighlight = "'Roboto', sans-serif";
+export const FamilyBase = "'Roboto', sans-serif";
 export const FamilySizeXs = "12px";
 export const FamilySizeSm = "14px";
 export const FamilySizeMd = "16px";

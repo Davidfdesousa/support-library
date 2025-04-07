@@ -15,9 +15,9 @@
   --button-font-md: var(--font-size-md);
   --button-font-lg: var(--font-size-lg);
 
-  --button-font-weight: var(--font-weight-medium);
-  --button-line-height: var(--font-line-height-normal);
-  --button-font-family: var(--font-family-highlight);
+  --button-font-weight: var(--family-weight-medium);
+  --button-line-height: var(--family-height-normal);
+  --button-font-family: var(--family-highlight);
 }
 
 /* Reset e base */

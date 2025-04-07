@@ -133,8 +133,8 @@
   <color name="spacing_stretch_sm">12px 8px</color>
   <color name="spacing_stretch_md">16px 12px</color>
   <color name="spacing_stretch_lg">24px 16px</color>
-  <color name="family_highlight">Roboto, sans-serif</color>
-  <color name="family_base">Roboto, sans-serif</color>
+  <color name="family_highlight">'Roboto', sans-serif</color>
+  <color name="family_base">'Roboto', sans-serif</color>
   <color name="family_size_xs">12px</color>
   <color name="family_size_sm">14px</color>
   <color name="family_size_md">16px</color>
