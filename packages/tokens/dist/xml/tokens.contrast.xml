@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+  <color name="color_white">#ffffff</color>
+  <color name="color_black">#000000</color>
   <color name="color_gray_25">#fcfcfd</color>
   <color name="color_gray_50">#f9fafb</color>
   <color name="color_gray_100">#f3f4f6</color>
+  <color name="color_gray_200">#ffffff</color>
   <color name="color_gray_300">#d1d5db</color>
   <color name="color_gray_400">#9ca3af</color>
   <color name="color_gray_500">#6b7280</color>
   <color name="color_gray_600">#4b5563</color>
   <color name="color_gray_700">#374151</color>
   <color name="color_gray_800">#1f2937</color>
+  <color name="color_gray_900">#000000</color>
   <color name="color_primary_25">#f5f9ff</color>
   <color name="color_primary_50">#eff6ff</color>
   <color name="color_primary_100">#dbeafe</color>
@@ -20,6 +24,7 @@
   <color name="color_primary_700">#1d4ed8</color>
   <color name="color_primary_800">#1e40af</color>
   <color name="color_primary_900">#1e3a8a</color>
+  <color name="color_primary_default">#fff333</color>
   <color name="color_secondary_25">#fff4eb</color>
   <color name="color_secondary_50">#ffebdd</color>
   <color name="color_secondary_100">#ffd5bb</color>
@@ -31,6 +36,7 @@
   <color name="color_secondary_700">#b03f00</color>
   <color name="color_secondary_800">#8c3300</color>
   <color name="color_secondary_900">#662500</color>
+  <color name="color_secondary_default">#fff333</color>
   <color name="color_success_50">#ecfdf5</color>
   <color name="color_success_100">#d1fae5</color>
   <color name="color_success_200">#a7f3d0</color>
@@ -41,6 +47,7 @@
   <color name="color_success_700">#047857</color>
   <color name="color_success_800">#065f46</color>
   <color name="color_success_900">#064e3b</color>
+  <color name="color_success_default">#fff333</color>
   <color name="color_warning_50">#fffbeb</color>
   <color name="color_warning_100">#fef3c7</color>
   <color name="color_warning_200">#fde68a</color>
@@ -51,6 +58,7 @@
   <color name="color_warning_700">#b45309</color>
   <color name="color_warning_800">#92400e</color>
   <color name="color_warning_900">#78350f</color>
+  <color name="color_warning_default">#fff333</color>
   <color name="color_error_50">#fef2f2</color>
   <color name="color_error_100">#fee2e2</color>
   <color name="color_error_200">#fecaca</color>
@@ -71,8 +79,12 @@
   <color name="color_info_700">#1d4ed8</color>
   <color name="color_info_800">#1e40af</color>
   <color name="color_info_900">#1e3a8a</color>
+  <color name="color_bg">#000000</color>
+  <color name="color_content">#ffffff</color>
+  <color name="color_danger_default">#fff333</color>
   <color name="radius_none">0px</color>
   <color name="radius_sm">4px</color>
+  <color name="radius_md">8px</color>
   <color name="radius_lg">16px</color>
   <color name="radius_full">500px</color>
   <color name="spacing_stack_xs">4px</color>
@@ -85,20 +97,30 @@
   <color name="spacing_inset_md">16px</color>
   <color name="spacing_inset_lg">24px</color>
   <color name="spacing_inset_xl">32px</color>
+  <color name="spacing_inline_xs">4px</color>
   <color name="spacing_inline_sm">8px</color>
   <color name="spacing_inline_md">16px</color>
   <color name="spacing_inline_lg">24px</color>
   <color name="spacing_inline_xl">32px</color>
+  <color name="spacing_squish_sm">8px 12px</color>
+  <color name="spacing_squish_md">12px 16px</color>
+  <color name="spacing_squish_lg">16px 24px</color>
   <color name="spacing_stretch_sm">12px 8px</color>
   <color name="spacing_stretch_md">16px 12px</color>
   <color name="spacing_stretch_lg">24px 16px</color>
+  <color name="family_highlight">'Roboto', sans-serif</color>
   <color name="family_base">'Roboto', sans-serif</color>
   <color name="family_size_xs">12px</color>
+  <color name="family_size_sm">14px</color>
+  <color name="family_size_md">16px</color>
+  <color name="family_size_lg">18px</color>
   <color name="family_size_xl">24px</color>
   <color name="family_size_2xl">30px</color>
   <color name="family_weight_regular">400</color>
+  <color name="family_weight_medium">500</color>
   <color name="family_weight_bold">700</color>
   <color name="family_line_height_tight">110%</color>
   <color name="family_line_height_normal">140%</color>
   <color name="family_line_height_relaxed">160%</color>
+  <color name="family_height_normal">140%</color>
 </resources>

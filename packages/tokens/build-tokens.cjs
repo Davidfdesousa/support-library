@@ -9,7 +9,7 @@ function lowercaseFirst(str) {
   return str.charAt(0).toLowerCase() + str.slice(1);
 }
 
-// Custom XML (Android)
+// Custom XML (Android) — corrigido
 StyleDictionary.registerFormat({
   name: 'custom/xml',
   formatter: function ({ dictionary }) {
@@ -18,7 +18,8 @@ StyleDictionary.registerFormat({
       dictionary.allProperties
         .map(token => {
           const name = token.name.replace(/\./g, '_');
-          const hex = token.value.replace(/^#ff/i, '#');
+          const value = token.value;
+          const hex = typeof value === 'string' ? value.replace(/^#ff/i, '#') : value;
           return `  <color name="${name}">${hex}</color>`;
         })
         .join('\n') +
@@ -152,4 +153,3 @@ themes.forEach((theme) => {
 });
 
 console.log('Tokens gerados com sucesso!\n');
-
