@@ -17,6 +17,10 @@
   font-family: var(--family-base);
 }
 
+:root {
+  font-family: var(--family-base);
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-content);
@@ -25,15 +29,10 @@ body {
   padding: 2rem;
 }
 
-button {
-  font-family: inherit;
-}
-
 .theme-toggle {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.5rem;
   font-size: var(--family-size-md);
 }
@@ -50,4 +49,8 @@ button {
   accent-color: var(--color-primary-default);
   width: 16px;
   height: 16px;
+}
+
+button {
+  font-family: inherit;
 }

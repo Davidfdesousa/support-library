@@ -1,4 +1,4 @@
-export function applyTheme(theme: 'light' | 'dark') {
+export function applyTheme(theme: 'light' | 'dark' | 'contrast') {
   const existingLink = document.getElementById('theme-stylesheet') as HTMLLinkElement | null
 
   const href = `https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.${theme}.css`

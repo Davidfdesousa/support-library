@@ -1,0 +1,54 @@
+{
+  "color": {
+    "white": "#FFFFFF",
+    "black": "#000000",
+    "bg": "#000000",
+    "content": "#FFFFFF",
+    "primary": {
+      "default": "#FFF333"
+    },
+    "secondary": {
+      "default": "#FFF333"
+    },
+    "success": {
+      "default": "#FFF333"
+    },
+    "warning": {
+      "default": "#FFF333"
+    },
+    "danger": {
+      "default": "#FFF333"
+    },
+    "gray": {
+      "200": "#FFFFFF",
+      "900": "#000000"
+    }
+  },
+  "radius": {
+    "md": "8px"
+  },
+  "spacing": {
+    "inline": {
+      "xs": "4px"
+    },
+    "squish": {
+      "sm": "8px 12px",
+      "md": "12px 16px",
+      "lg": "16px 24px"
+    }
+  },
+  "family": {
+    "highlight": "'Roboto', sans-serif",
+    "weight": {
+      "medium": 500
+    },
+    "height": {
+      "normal": "140%"
+    },
+    "size": {
+      "sm": "14px",
+      "md": "16px",
+      "lg": "18px"
+    }
+  }
+}

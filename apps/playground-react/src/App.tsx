@@ -4,17 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { applyTheme } from './theme-loader'
 
+type Theme = 'light' | 'dark' | 'contrast'
+
 function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark')
+    document.documentElement.classList.remove('light', 'dark', 'contrast')
     document.documentElement.classList.add(theme)
     applyTheme(theme)
   }, [theme])
 
   const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTheme(e.target.value as 'light' | 'dark')
+    setTheme(e.target.value as Theme)
   }
 
   return (
@@ -55,6 +57,16 @@ function App() {
               onChange={handleThemeChange}
             />
             Tema Dark
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="theme"
+              value="contrast"
+              checked={theme === 'contrast'}
+              onChange={handleThemeChange}
+            />
+            Tema Contraste
           </label>
         </fieldset>
 

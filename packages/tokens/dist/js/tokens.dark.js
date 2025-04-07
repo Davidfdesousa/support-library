@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Apr 2025 14:11:31 GMT
+ * Generated on Mon, 07 Apr 2025 14:19:00 GMT
  */
 
 export const ColorWhite = "#ffffff";
