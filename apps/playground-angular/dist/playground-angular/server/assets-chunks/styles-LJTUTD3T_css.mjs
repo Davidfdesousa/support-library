@@ -1,2 +1,0 @@
-export default `@import"https://cdnexamples.blob.core.windows.net/storybook/cdn/fonts/stylesheet.css";@import"https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.light.css";@import"https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.dark.css";body{padding:0;margin:0}
-`;
