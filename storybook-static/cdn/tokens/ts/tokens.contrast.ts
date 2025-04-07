@@ -82,6 +82,12 @@ export interface Tokens {
   'colorBg': string;
   'colorContent': string;
   'colorDangerDefault': string;
+  'colorButtonDefaultFg': string;
+  'colorButtonPrimaryFg': string;
+  'colorButtonSecondaryFg': string;
+  'colorButtonSuccessFg': string;
+  'colorButtonWarningFg': string;
+  'colorButtonDangerFg': string;
   'radiusNone': string;
   'radiusSm': string;
   'radiusMd': string;
@@ -206,8 +212,14 @@ export const tokens: Tokens = {
   'colorInfo800': '#1e40af',
   'colorInfo900': '#1e3a8a',
   'colorBg': '#000000',
-  'colorContent': '#000000',
+  'colorContent': '#ffffff',
   'colorDangerDefault': '#fff333',
+  'colorButtonDefaultFg': '#000000',
+  'colorButtonPrimaryFg': '#000000',
+  'colorButtonSecondaryFg': '#000000',
+  'colorButtonSuccessFg': '#000000',
+  'colorButtonWarningFg': '#000000',
+  'colorButtonDangerFg': '#000000',
   'radiusNone': '0px',
   'radiusSm': '4px',
   'radiusMd': '8px',

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Apr 2025 14:46:29 GMT
+ * Generated on Mon, 07 Apr 2025 15:06:44 GMT
  */
 
 export const ColorWhite = "#ffffff";
@@ -83,8 +83,14 @@ export const ColorInfo700 = "#1d4ed8";
 export const ColorInfo800 = "#1e40af";
 export const ColorInfo900 = "#1e3a8a";
 export const ColorBg = "#000000";
-export const ColorContent = "#000000";
+export const ColorContent = "#ffffff";
 export const ColorDangerDefault = "#fff333";
+export const ColorButtonDefaultFg = "#000000";
+export const ColorButtonPrimaryFg = "#000000";
+export const ColorButtonSecondaryFg = "#000000";
+export const ColorButtonSuccessFg = "#000000";
+export const ColorButtonWarningFg = "#000000";
+export const ColorButtonDangerFg = "#000000";
 export const RadiusNone = "0px";
 export const RadiusSm = "4px";
 export const RadiusMd = "8px";

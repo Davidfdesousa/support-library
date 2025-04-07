@@ -12,6 +12,6 @@ export default `<!doctype html>
 <style>body{padding:0;margin:0}</style><link rel="stylesheet" href="styles-LJTUTD3T.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-LJTUTD3T.css"></noscript><link rel="preload" href="https://cdnexamples.blob.core.windows.net/storybook/cdn/fonts/stylesheet.css" as="style"><link rel="preload" href="https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.light.css" as="style"><link rel="preload" href="https://cdnexamples.blob.core.windows.net/storybook/cdn/tokens/css/variables.dark.css" as="style"></head>
 <body ngcm="">
   <app-root></app-root>
-<link rel="modulepreload" href="chunk-4VFRJXXT.js"><script src="polyfills-OEPZ4W45.js" type="module"></script><script src="main-7ZNGZPSE.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-RUW6T6NB.js"><script src="polyfills-OEPZ4W45.js" type="module"></script><script src="main-UXU5J4VJ.js" type="module"></script></body>
 </html>
 `;
