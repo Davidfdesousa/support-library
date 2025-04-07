@@ -42,35 +42,60 @@ button {
   cursor: pointer;
 }
 
-/* Variantes */
+/* Variantes padrão */
 button.default {
   --button-bg: var(--color-gray-200);
-  --button-fg: var(--color-button-default-fg, var(--color-gray-900));
+  --button-fg: var(--color-gray-900);
 }
 
 button.primary {
   --button-bg: var(--color-primary-default);
-  --button-fg: var(--color-button-primary-fg, var(--color-white));
+  --button-fg: var(--color-white);
 }
 
 button.secondary {
   --button-bg: var(--color-secondary-default);
-  --button-fg: var(--color-button-secondary-fg, var(--color-white));
+  --button-fg: var(--color-white);
 }
 
 button.success {
   --button-bg: var(--color-success-default);
-  --button-fg: var(--color-button-success-fg, var(--color-white));
+  --button-fg: var(--color-white);
 }
 
 button.warning {
   --button-bg: var(--color-warning-default);
-  --button-fg: var(--color-button-warning-fg, var(--color-gray-900));
+  --button-fg: var(--color-gray-900);
 }
 
 button.danger {
   --button-bg: var(--color-danger-default);
-  --button-fg: var(--color-button-danger-fg, var(--color-white));
+  --button-fg: var(--color-white);
+}
+
+/* Variantes para o tema contrast */
+:host-context(html.contrast) button.default {
+  --button-fg: var(--color-button-default-fg);
+}
+
+:host-context(html.contrast) button.primary {
+  --button-fg: var(--color-button-primary-fg);
+}
+
+:host-context(html.contrast) button.secondary {
+  --button-fg: var(--color-button-secondary-fg);
+}
+
+:host-context(html.contrast) button.success {
+  --button-fg: var(--color-button-success-fg);
+}
+
+:host-context(html.contrast) button.warning {
+  --button-fg: var(--color-button-warning-fg);
+}
+
+:host-context(html.contrast) button.danger {
+  --button-fg: var(--color-button-danger-fg);
 }
 
 /* Tamanhos */
