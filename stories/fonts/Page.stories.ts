@@ -17,4 +17,4 @@ type Story = StoryObj<typeof meta>;
 export const Web: Story = {};
 
 // More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
-export const Mobile: Story = {};
+// export const Mobile: Story = {};
