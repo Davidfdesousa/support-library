@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Mon, 07 Apr 2025 12:38:10 GMT
+// Generated on Mon, 07 Apr 2025 12:46:56 GMT
 
 
 import UIKit
@@ -54,7 +54,7 @@ public class StyleDictionaryLightTokens {
     public static let colorPrimary200 = UIColor(red: 0.749, green: 0.859, blue: 0.996, alpha: 1)
     public static let colorPrimary25 = UIColor(red: 0.961, green: 0.976, blue: 1.000, alpha: 1)
     public static let colorPrimary300 = UIColor(red: 0.576, green: 0.773, blue: 0.992, alpha: 1)
-    public static let colorPrimary400 = UIColor(red: 0.020, green: 0.588, blue: 0.412, alpha: 1)
+    public static let colorPrimary400 = UIColor(red: 0.576, green: 0.773, blue: 0.992, alpha: 1)
     public static let colorPrimary50 = UIColor(red: 0.937, green: 0.965, blue: 1.000, alpha: 1)
     public static let colorPrimary500 = UIColor(red: 0.231, green: 0.510, blue: 0.965, alpha: 1)
     public static let colorPrimary600 = UIColor(red: 0.145, green: 0.388, blue: 0.922, alpha: 1)
@@ -62,7 +62,7 @@ public class StyleDictionaryLightTokens {
     public static let colorPrimary800 = UIColor(red: 0.118, green: 0.251, blue: 0.686, alpha: 1)
     public static let colorPrimary900 = UIColor(red: 0.118, green: 0.227, blue: 0.541, alpha: 1)
     public static let colorPrimaryDefault = UIColor(red: 0.231, green: 0.510, blue: 0.965, alpha: 1)
-    public static let colorPrimaryHover = UIColor(red: 0.020, green: 0.588, blue: 0.412, alpha: 1)
+    public static let colorPrimaryHover = UIColor(red: 0.576, green: 0.773, blue: 0.992, alpha: 1)
     public static let colorPrimaryIntense = UIColor(red: 0.114, green: 0.306, blue: 0.847, alpha: 1)
     public static let colorPrimaryMuted = UIColor(red: 0.576, green: 0.773, blue: 0.992, alpha: 1)
     public static let colorPrimaryPressed = UIColor(red: 0.145, green: 0.388, blue: 0.922, alpha: 1)
