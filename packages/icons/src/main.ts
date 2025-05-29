@@ -2,23 +2,25 @@ import './style.css'
 import selection from './assets/icomoon/selection.json'
 
 interface Glyph {
+  icon: {
+    tags?: string[]        // array de keywords
+  }
   properties: {
     name: string
     code: number
-    tags?: string[]
+    ligatures?: string     // string de ligatures (vírgula-separada)
   }
 }
 
-// helper para remover acentos
+// helper para remover acentos e normalizar
 function normalizeText(str: string): string {
-  // decompondo em caracteres + diacríticos e removendo-os
   return str
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')  // remove marks
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
 }
 
-// monta grid de ícones
+// referências no DOM
 const grid = document.getElementById('grid')!
 const searchInput = document.getElementById('search') as HTMLInputElement
 const toastEl = document.getElementById('toast')!
@@ -27,13 +29,26 @@ const glyphs = (selection as any).icons as Glyph[]
 
 function render(filter = '') {
   grid.innerHTML = ''
-  const term = filter.toLowerCase()
+  const term = normalizeText(filter)
 
   glyphs
     .filter(g => {
-      // junta nome + tags
-      const keywords = [g.properties.name, ...(g.properties.tags ?? [])]
-      // normaliza cada termo
+      // 1) tags do icon.tags (array)
+      const tagsArray = g.icon.tags ?? []
+
+      // 2) ligatures do properties.ligatures (string csv)
+      const ligasArray = g.properties.ligatures
+        ? g.properties.ligatures.split(',').map(t => t.trim())
+        : []
+
+      // 3) nome do ícone
+      const keywords = [
+        g.properties.name,
+        ...tagsArray,
+        ...ligasArray
+      ]
+
+      // 4) busca accent-insensitive
       return keywords.some(raw =>
         normalizeText(raw).includes(term)
       )
@@ -50,7 +65,9 @@ function render(filter = '') {
       `
       card.onclick = () => {
         const snippet = `<i class="icon icomoon icon-${g.properties.name}"></i>`
-        navigator.clipboard.writeText(snippet).then(() => showToast(`Copiado: icon-${g.properties.name}`))
+        navigator.clipboard
+          .writeText(snippet)
+          .then(() => showToast(`Copiado: icon-${g.properties.name}`))
       }
       grid.appendChild(card)
     })
@@ -62,10 +79,7 @@ function showToast(msg: string) {
   setTimeout(() => (toastEl.hidden = true), 2000)
 }
 
-// eventos
-searchInput.addEventListener('input', () => {
-  render(searchInput.value)
-})
+searchInput.addEventListener('input', () => render(searchInput.value))
 
-// render inicial
+// primeira renderização
 render()
