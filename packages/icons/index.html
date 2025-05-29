@@ -1,13 +1,20 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
+
+  <link rel="stylesheet" href="/src/assets/icomoon/style.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <h1>Ícones IcoMoon</h1>
+    <input id="search" type="text" placeholder="Filtrar por nome ou keyword…" />
+
+    <div id="grid" class="icon-grid"></div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
