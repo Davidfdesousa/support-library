@@ -9,6 +9,15 @@ interface Glyph {
   }
 }
 
+// helper para remover acentos
+function normalizeText(str: string): string {
+  // decompondo em caracteres + diacríticos e removendo-os
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')  // remove marks
+    .toLowerCase()
+}
+
 // monta grid de ícones
 const grid = document.getElementById('grid')!
 const searchInput = document.getElementById('search') as HTMLInputElement
@@ -22,8 +31,12 @@ function render(filter = '') {
 
   glyphs
     .filter(g => {
+      // junta nome + tags
       const keywords = [g.properties.name, ...(g.properties.tags ?? [])]
-      return keywords.some(t => t.toLowerCase().includes(term))
+      // normaliza cada termo
+      return keywords.some(raw =>
+        normalizeText(raw).includes(term)
+      )
     })
     .forEach(g => {
       const card = document.createElement('div')
@@ -50,7 +63,9 @@ function showToast(msg: string) {
 }
 
 // eventos
-searchInput.addEventListener('input', () => render(searchInput.value))
+searchInput.addEventListener('input', () => {
+  render(searchInput.value)
+})
 
 // render inicial
 render()
